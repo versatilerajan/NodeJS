@@ -5,7 +5,6 @@ const url =  require("url")
 const server = http.createServer((req, res)=>{
     const log = `${new Date().toISOString()}- ${req.method}- ${req.url}\n`
     res.setHeader("Content-Type", "application/json")
-    res.end(JSON.stringify({ message: "Hello World" }))
 
     switch(url.parse(req.url).pathname){
         case "/":
